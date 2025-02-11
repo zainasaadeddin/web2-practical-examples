@@ -1,0 +1,71 @@
+/* Basic Reset  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Make navigation items horizontal */
+  justify-content: center; /* Center them */
+  gap: 20px; /* Space between items */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+}
+
+article {
+  flex: 3; /* Takes up 3/4 of the available space */
+}
+
+aside {
+  flex: 1; /* Takes up 1/4 of the available space */
+  background-color: #f0f0f0;
+  padding: 1em;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+  display: block; 
+  margin: 10px 0;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* Stack article and aside vertically */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center; /* Center nav items */
+  }
+
+  article, aside {
+    flex: 1; /* Each takes full width */
+   
+  }
+
+}
